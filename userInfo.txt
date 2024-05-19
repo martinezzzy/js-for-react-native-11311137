@@ -1,0 +1,13 @@
+function createUserProfiles ( originalNames, modifiedNames ) {
+    if( originalNames.length !== modifiedNames.length ) {
+        throw new Error ("The length of the original names array and the modified names array must be the same.");
+    }
+
+    return originalNames.map (( originalName, index ) => {
+        return {
+            id: index + 1,
+            originalName: originalName,
+            modifiedName: modifiedNames[index]
+        };
+    });
+}
